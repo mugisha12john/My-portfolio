@@ -17,19 +17,6 @@ const Contact: React.FC = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
-  };
-
   return (
     <section
       id="contact"
@@ -147,7 +134,11 @@ const Contact: React.FC = () => {
         </div>
 
         <div className="contact-form">
-          <form onSubmit={handleSubmit} className="flex flex-col gap-3.5">
+          <form
+            action="https://formspree.io/f/xaqvneyn"
+            method="POST"
+            className="flex flex-col gap-3.5"
+          >
             <div className="form-row grid grid-cols-1 sm:grid-cols-2 gap-3.5">
               <div className="form-group flex flex-col gap-1.5">
                 <label
