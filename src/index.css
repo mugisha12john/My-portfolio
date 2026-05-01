@@ -1,1 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Namdhinggo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap");
+
 @import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  ::selection {
+    background: #7fee64;
+    color: #0a0a0a;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: #0a0a0a;
+    color: #ffffff;
+    font-family: "Namdhinggo", serif;
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background-image:
+      linear-gradient(rgba(127, 238, 100, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(127, 238, 100, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0a0a0a;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #4aaa38;
+  }
+}
