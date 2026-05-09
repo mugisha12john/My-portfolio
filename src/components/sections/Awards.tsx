@@ -1,11 +1,16 @@
 import React from "react";
-
+import koica from "../../assets/team intello.jpeg";
+import scratchWinner from "../../assets/scratch winner.jpeg";
+import codewars from "../../assets/codewars.png";
+import github from "../../assets/github.png";
+import wpm from "../../assets/wpm.png";
 interface Award {
   id: number;
   year: string;
   title: string;
   description: string;
   issuer: string;
+  image: string;
   icon: React.ReactNode;
 }
 
@@ -18,6 +23,7 @@ const Awards: React.FC = () => {
       description:
         "Won 1st place in the IoT project team competition under KOICA Rwanda's intensive technology program, delivering a working embedded system solution.",
       issuer: "KOICA Rwanda · 2025",
+      image: koica,
       icon: (
         <svg
           width="20"
@@ -37,6 +43,7 @@ const Awards: React.FC = () => {
       title: "KOICA Game Challenge — 2nd Place",
       description:
         "Placed 2nd overall in KOICA Rwanda's competitive game challenge, demonstrating problem-solving ability and technical performance under pressure.",
+      image: scratchWinner,
       issuer: "KOICA Rwanda · 2025",
       icon: (
         <svg
@@ -58,6 +65,7 @@ const Awards: React.FC = () => {
       title: "Codewars Trusted User",
       description:
         "Granted kata-marking privileges on Codewars — recognizing code quality, problem-solving depth, and consistent contribution to the developer community.",
+      image: codewars,
       issuer: "Codewars · Trusted Status",
       icon: (
         <svg
@@ -79,6 +87,7 @@ const Awards: React.FC = () => {
       title: "GitHub Pro",
       description:
         "GitHub Pro member with access to advanced collaboration tools, unlimited private repositories, and enhanced CI/CD capabilities for professional delivery.",
+      image: github,
       issuer: "GitHub · Pro Account",
       icon: (
         <svg
@@ -100,6 +109,7 @@ const Awards: React.FC = () => {
       title: "60 WPM — Typing.com",
       description:
         "Achieved 60 WPM on Typing.com (October 28, 2025), demonstrating focus, consistency, and technical precision under timed conditions.  ",
+      image: wpm,
       issuer: "Typing.com · 2025",
       icon: (
         <svg
@@ -118,12 +128,12 @@ const Awards: React.FC = () => {
   ];
 
   return (
-    <section id="awards" className="relative py-[120px] px-[60px] bg-bg">
+    <section id="awards" className="relative py-30 px-15 bg-bg">
       <div className="section-label font-mono text-[10px] text-green tracking-[0.25em] uppercase mb-4 flex items-center gap-3 before:content-[''] before:block before:w-6 before:h-px before:bg-green">
         Recognition
       </div>
 
-      <h2 className="section-title text-[clamp(32px,4vw,52px)] font-black leading-[1.1] tracking-[-0.02em] mb-[60px]">
+      <h2 className="section-title text-[clamp(32px,4vw,52px)] font-black leading-[1.1] tracking-[-0.02em] mb-15">
         Awards & <span className="text-green">Achievements</span>
       </h2>
 
@@ -133,7 +143,14 @@ const Awards: React.FC = () => {
             key={award.id}
             className="award-card bg-bg-3 p-8 px-7 relative overflow-hidden border-t-2 border-t-transparent transition-all duration-300 hover:bg-bg-4 hover:border-t-green"
           >
-            <div className="award-icon-wrap w-[50px] h-[50px] border border-[rgba(127,238,100,0.12)] flex items-center justify-center text-green mb-4.5 bg-bg-2 transition-all hover:bg-[rgba(127,238,100,0.06)] hover:border-[rgba(127,238,100,0.3)]">
+            <div className="award-img-wrap">
+              <img src={award.image}  className="w-80 h-52" alt={`${award.title} proof`} />
+              <div className="award-img-overlay"></div>
+              <div className="award-img-icon">
+                <i data-lucide="trophy"></i>
+              </div>
+            </div>
+            <div className="award-icon-wrap w-12.5 h-12.5 border border-[rgba(127,238,100,0.12)] flex items-center justify-center text-green mb-4.5 bg-bg-2 transition-all hover:bg-[rgba(127,238,100,0.06)] hover:border-[rgba(127,238,100,0.3)]">
               {award.icon}
             </div>
 
