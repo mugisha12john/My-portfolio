@@ -74,7 +74,7 @@ const About: React.FC = () => {
             <strong>Christian values</strong>.
           </p>
           <p className="font-mono text-[13px] text-text-dim leading-[1.9] mb-5">
-            Based in <strong>Kigali, Rwanda</strong>, I lead a team of 10 at{" "}
+            Based in <strong>Kigali, Rwanda</strong>, I lead a team of 9 at{" "}
             <strong>9 call company</strong>. We are currently developing a
             real-time IoT water monitoring system designed to bring reliable
             data to our local communities.
