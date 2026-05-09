@@ -2,12 +2,12 @@ import React from "react";
 
 const Experience: React.FC = () => {
   return (
-    <section id="experience" className="relative py-[120px] px-[60px] bg-bg">
+    <section id="experience" className="relative py-30 px-15 bg-bg">
       <div className="section-label font-mono text-[10px] text-green tracking-[0.25em] uppercase mb-4 flex items-center gap-3 before:content-[''] before:block before:w-6 before:h-px before:bg-green">
         Journey
       </div>
 
-      <h2 className="section-title text-[clamp(32px,4vw,52px)] font-black leading-[1.1] tracking-[-0.02em] mb-[60px]">
+      <h2 className="section-title text-[clamp(32px,4vw,52px)] font-black leading-[1.1] tracking-[-0.02em] mb-15">
         Experience & <span className="text-green">Education</span>
       </h2>
 
@@ -33,7 +33,7 @@ const Experience: React.FC = () => {
             <div className="timeline::before absolute left-0 top-2 bottom-0 w-px bg-[rgba(127,238,100,0.12)]" />
 
             <div className="timeline-item relative mb-9">
-              <div className="timeline-dot absolute left-[-28px] top-1.5 w-2.5 h-2.5 rounded-full bg-bg border-2 border-[rgba(127,238,100,0.3)] transition-all hover:bg-green" />
+              <div className="timeline-dot absolute -left-7 top-1.5 w-2.5 h-2.5 rounded-full bg-bg border-2 border-[rgba(127,238,100,0.3)] transition-all hover:bg-green" />
               <div className="timeline-period font-mono text-[10px] text-green tracking-[0.12em] mb-1.5">
                 2026 — Present
               </div>
@@ -51,7 +51,7 @@ const Experience: React.FC = () => {
             </div>
 
             <div className="timeline-item relative mb-9">
-              <div className="timeline-dot absolute left-[-28px] top-1.5 w-2.5 h-2.5 rounded-full bg-bg border-2 border-[rgba(127,238,100,0.3)] transition-all hover:bg-green" />
+              <div className="timeline-dot absolute -left-7 top-1.5 w-2.5 h-2.5 rounded-full bg-bg border-2 border-[rgba(127,238,100,0.3)] transition-all hover:bg-green" />
               <div className="timeline-period font-mono text-[10px] text-green tracking-[0.12em] mb-1.5">
                 Feb, 2025 — present
               </div>
@@ -67,7 +67,7 @@ const Experience: React.FC = () => {
             </div>
 
             <div className="timeline-item relative mb-9">
-              <div className="timeline-dot absolute left-[-28px] top-1.5 w-2.5 h-2.5 rounded-full bg-bg border-2 border-[rgba(127,238,100,0.3)] transition-all hover:bg-green" />
+              <div className="timeline-dot absolute -left-7 top-1.5 w-2.5 h-2.5 rounded-full bg-bg border-2 border-[rgba(127,238,100,0.3)] transition-all hover:bg-green" />
               <div className="timeline-period font-mono text-[10px] text-green tracking-[0.12em] mb-1.5">
                 2024 — Present
               </div>
@@ -86,7 +86,7 @@ const Experience: React.FC = () => {
             </div>
 
             <div className="timeline-item relative">
-              <div className="timeline-dot absolute left-[-28px] top-1.5 w-2.5 h-2.5 rounded-full bg-bg border-2 border-[rgba(127,238,100,0.3)] transition-all hover:bg-green" />
+              <div className="timeline-dot absolute -left-7 top-1.5 w-2.5 h-2.5 rounded-full bg-bg border-2 border-[rgba(127,238,100,0.3)] transition-all hover:bg-green" />
               <div className="timeline-period font-mono text-[10px] text-green tracking-[0.12em] mb-1.5">
                 June, 2024 — Sept, 2024
               </div>
@@ -125,7 +125,7 @@ const Experience: React.FC = () => {
             <div className="timeline::before absolute left-0 top-2 bottom-0 w-px bg-[rgba(127,238,100,0.12)]" />
 
             <div className="timeline-item relative mb-9">
-              <div className="timeline-dot absolute left-[-28px] top-1.5 w-2.5 h-2.5 rounded-full bg-bg border-2 border-[rgba(127,238,100,0.3)] transition-all hover:bg-green" />
+              <div className="timeline-dot absolute -left-7 top-1.5 w-2.5 h-2.5 rounded-full bg-bg border-2 border-[rgba(127,238,100,0.3)] transition-all hover:bg-green" />
               <div className="timeline-period font-mono text-[10px] text-green tracking-[0.12em] mb-1.5">
                 2022 — 2025
               </div>
@@ -143,7 +143,7 @@ const Experience: React.FC = () => {
             </div>
 
             <div className="timeline-item relative mb-9">
-              <div className="timeline-dot absolute left-[-28px] top-1.5 w-2.5 h-2.5 rounded-full bg-bg border-2 border-[rgba(127,238,100,0.3)] transition-all hover:bg-green" />
+              <div className="timeline-dot absolute -left-7 top-1.5 w-2.5 h-2.5 rounded-full bg-bg border-2 border-[rgba(127,238,100,0.3)] transition-all hover:bg-green" />
               <div className="timeline-period font-mono text-[10px] text-green tracking-[0.12em] mb-1.5">
                 2025
               </div>
@@ -161,7 +161,7 @@ const Experience: React.FC = () => {
             </div>
 
             <div className="timeline-item relative mb-9">
-              <div className="timeline-dot absolute left-[-28px] top-1.5 w-2.5 h-2.5 rounded-full bg-bg border-2 border-[rgba(127,238,100,0.3)] transition-all hover:bg-green" />
+              <div className="timeline-dot absolute -left-7 top-1.5 w-2.5 h-2.5 rounded-full bg-bg border-2 border-[rgba(127,238,100,0.3)] transition-all hover:bg-green" />
               <div className="timeline-period font-mono text-[10px] text-green tracking-[0.12em] mb-1.5">
                 2025
               </div>
@@ -178,7 +178,7 @@ const Experience: React.FC = () => {
             </div>
 
             <div className="timeline-item relative mb-9">
-              <div className="timeline-dot absolute left-[-28px] top-1.5 w-2.5 h-2.5 rounded-full bg-bg border-2 border-[rgba(127,238,100,0.3)] transition-all hover:bg-green" />
+              <div className="timeline-dot absolute -left-7 top-1.5 w-2.5 h-2.5 rounded-full bg-bg border-2 border-[rgba(127,238,100,0.3)] transition-all hover:bg-green" />
               <div className="timeline-period font-mono text-[10px] text-green tracking-[0.12em] mb-1.5">
                 2025 - present
               </div>
@@ -196,7 +196,7 @@ const Experience: React.FC = () => {
             </div>
 
             <div className="timeline-item relative">
-              <div className="timeline-dot absolute left-[-28px] top-1.5 w-2.5 h-2.5 rounded-full bg-bg border-2 border-[rgba(127,238,100,0.3)] transition-all hover:bg-green" />
+              <div className="timeline-dot absolute -left-7 top-1.5 w-2.5 h-2.5 rounded-full bg-bg border-2 border-[rgba(127,238,100,0.3)] transition-all hover:bg-green" />
               <div className="timeline-period font-mono text-[10px] text-green tracking-[0.12em] mb-1.5">
                 Ongoing
               </div>

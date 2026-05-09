@@ -58,13 +58,20 @@ doc
 doc
   .font("Helvetica")
   .fontSize(10)
-  .text("johnbutista004@gmail.com  |  +250 (---) --- ----  |  Kigali, Rwanda", {
+  .text("johbutista004@gmail.com  |  +250 784 961 277  |  Kigali, Rwanda", {
     align: "center",
   });
-doc.text(
-  "linkedin.com/in/jean-baptiste-mugisha-034b932a1  |  github.com/mugisha12john",
-  { align: "center" },
-);
+doc
+  .font("Helvetica")
+  .fontSize(10)
+  .text("LinkedIn: linkedin.com/in/jean-baptiste-mugisha-034b932a1", {
+    align: "center",
+    link: "https://www.linkedin.com/in/jean-baptiste-mugisha-034b932a1",
+  });
+doc.text("GitHub: github.com/mugisha12john", {
+  align: "center",
+  link: "https://github.com/mugisha12john",
+});
 
 // --- SUMMARY ---
 drawSectionHeader("Summary");
@@ -72,7 +79,7 @@ doc
   .font("Helvetica")
   .fontSize(10)
   .text(
-    "Full-Stack & IoT Engineer with experience crafting web and hardware-integrated applications using React.js, Node.js, TypeScript, and ESP32. Skilled in developing IoT platforms, scalable backend services, and interactive dashboards, having led cross-functional teams. Dedicated to writing clean code and creating resilient, user-focused digital infrastructure.",
+    "Full-stack and IoT engineer focused on building reliable web applications and hardware-integrated systems. Experienced with React, Node.js, TypeScript, and ESP32, delivering real-time dashboards, scalable services, and user-centered interfaces. Known for clean architecture, strong execution, and cross-functional collaboration.",
     { align: "justify", lineGap: 3 },
   );
 
@@ -86,24 +93,26 @@ drawTwoColumn(
   "2026 - Present",
 );
 drawBullet(
-  "Leading a 6-person cross-functional team building WCAM — an IoT water monitoring platform, enhancing data reliability for rural communities",
+  "Leading a 6-person cross-functional team building WCAM, an IoT water monitoring platform for rural communities",
 );
 drawBullet(
-  "Owned system architecture, integrating ESP32 firmware with a React.js dashboard",
+  "Owned system architecture, integrating ESP32 firmware with a React dashboard",
 );
-drawBullet(
-  "Managed full-stack state, incorporating real-time dashboards and a 3-tier RBAC security design",
-);
+drawBullet("Delivered real-time dashboards and a 3-tier RBAC security design");
 doc.moveDown();
 
-drawTwoColumn("Ishuri App", "Full-Stack Developer", "Remote", "2023 - 2024");
-drawBullet(
-  "Built custom web applications for local businesses and NGOs, delivering modern user experiences",
+drawTwoColumn(
+  "The Gym Rwanda",
+  "Software Engineering Trainee",
+  "Rwanda",
+  "2025 - Present",
 );
 drawBullet(
-  "Developed a complete Kinini Sacco banking system with a focus on transaction security",
+  "Training on React, TypeScript, Node.js, and system architecture through project-based delivery",
 );
-drawBullet("Created early prototypes for the ElevateLink mentorship platform");
+drawBullet(
+  "Collaborated on full-stack features and UI workflows with focus on code quality",
+);
 doc.moveDown();
 
 // --- PROJECTS ---
@@ -111,25 +120,36 @@ drawSectionHeader("Projects");
 
 drawProjectHeader(
   "WCAM (Water Community Administration & Monitoring)",
-  "GitHub — Live Demo",
+  "Private (request access)",
 );
 drawBullet(
   "Developed a full-stack IoT platform pairing ESP32 microcontrollers with flow sensors",
 );
 drawBullet(
-  "Engineered a custom leak-detection algorithm flagging anomalies via real-time delta tracking",
+  "Engineered a leak-detection algorithm flagging anomalies via real-time delta tracking",
 );
-drawBullet(
-  "Tech: Node.js, Express, React, TypeScript, Tailwind CSS, Built-in IoT integration",
-);
+drawBullet("Tech: Node.js, React, TypeScript, Socket.io, MySQL, ESP32");
 doc.moveDown();
 
-drawProjectHeader("Suzuma App", "GitHub — Live Demo");
+drawProjectHeader("SPCMS (Smart Power & Cooling)", "GitHub");
 drawBullet(
-  "Built an intuitive, secure authentication backend with Next.js and Firebase",
+  "School platform for power usage control and equipment protection with Spring Boot and JSP",
 );
-drawBullet("Designed accessible interfaces and fast data fetching using React");
-drawBullet("Tech: Next.js, React, Tailwind CSS, Supabase");
+drawBullet("Tech: Spring Boot, Spring Security, JPA, JSP, MySQL");
+doc.moveDown();
+
+drawProjectHeader("ElevateLink", "Live Demo — GitHub");
+drawBullet(
+  "Mentorship platform built with PHP, MySQL, and TailwindCSS for learner guidance",
+);
+drawBullet("Tech: PHP, MySQL, Tailwind CSS");
+doc.moveDown();
+
+drawProjectHeader("Capgemini Clone", "Live Demo — GitHub");
+drawBullet(
+  "Responsive marketing site clone focused on layout precision and UI consistency",
+);
+drawBullet("Tech: HTML, Tailwind CSS, JavaScript");
 doc.moveDown();
 
 // --- EDUCATION ---
