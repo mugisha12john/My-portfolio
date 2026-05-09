@@ -53,12 +53,12 @@ const FACTS = [
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="relative py-[120px] px-[60px] bg-bg-2">
+    <section id="about" className="relative py-30 px-15 bg-bg-2">
       <div className="section-label font-mono text-[10px] text-green tracking-[0.25em] uppercase mb-4 flex items-center gap-3 before:content-[''] before:block before:w-6 before:h-px before:bg-green">
         About Me
       </div>
 
-      <h2 className="section-title text-[clamp(32px,4vw,52px)] font-black leading-[1.1] tracking-[-0.02em] mb-[60px]">
+      <h2 className="section-title text-[clamp(32px,4vw,52px)] font-black leading-[1.1] tracking-[-0.02em] mb-15">
         The Engineer
         <br />
         <span className="text-green">Behind the Code</span>
@@ -100,19 +100,19 @@ const About: React.FC = () => {
         </div>
 
         <div className="about-portrait-wrap">
-          <div className="portrait-frame relative w-full aspect-[3/4] border border-[rgba(127,238,100,0.3)] overflow-hidden bg-bg-3">
-            <div className="corner-tl absolute w-[18px] h-[18px] z-[2] top-0 left-0 border-t-2 border-l-2 border-green" />
-            <div className="corner-tr absolute w-[18px] h-[18px] z-[2] top-0 right-0 border-t-2 border-r-2 border-green" />
-            <div className="corner-bl absolute w-[18px] h-[18px] z-[2] bottom-0 left-0 border-b-2 border-l-2 border-green" />
-            <div className="corner-br absolute w-[18px] h-[18px] z-[2] bottom-0 right-0 border-b-2 border-r-2 border-green" />
+          <div className="portrait-frame relative w-full aspect-3/4 border border-[rgba(127,238,100,0.3)] overflow-hidden bg-bg-3">
+            <div className="corner-tl absolute w-4.5 h-4.5 z-2 top-0 left-0 border-t-2 border-l-2 border-green" />
+            <div className="corner-tr absolute w-4.5 h-4.5 z-2 top-0 right-0 border-t-2 border-r-2 border-green" />
+            <div className="corner-bl absolute w-4.5 h-4.5 z-2 bottom-0 left-0 border-b-2 border-l-2 border-green" />
+            <div className="corner-br absolute w-4.5 h-4.5 z-2 bottom-0 right-0 border-b-2 border-r-2 border-green" />
 
             <img
               src={aboutPic}
               alt="Jean Baptiste Mugisha"
-              className="w-full h-full object-cover block grayscale-[15%] contrast-[1.05] transition-[filter] duration-400 hover:grayscale-0 hover:contrast-[1.1]"
+              className="w-full h-full object-cover block grayscale-15 contrast-[1.05] transition-[filter] duration-400 hover:grayscale-0 hover:contrast-[1.1]"
             />
 
-            <div className="portrait-name-tag bg-green text-bg px-4 py-2.5 font-mono text-[10px] tracking-[0.12em] uppercase flex justify-between items-center absolute bottom-0 w-full z-10 hidden">
+            <div className="portrait-name-tag bg-green text-bg px-4 py-2.5 font-mono text-[10px] tracking-[0.12em] uppercase justify-between items-center absolute bottom-0 w-full z-10 hidden">
               <span>Jean Baptiste Mugisha</span>
               <span>Full-Stack &amp; IoT</span>
             </div>
@@ -150,7 +150,7 @@ const About: React.FC = () => {
 
           <a
             href="#experience"
-            className="learn-more-btn inline-flex items-center gap-3 bg-green text-bg font-mono text-[12px] font-bold tracking-[0.12em] uppercase px-7 py-3.5 no-underline mt-7 transition-all hover:bg-white hover:translate-y-[-2px]"
+            className="learn-more-btn inline-flex items-center gap-3 bg-green text-bg font-mono text-[12px] font-bold tracking-[0.12em] uppercase px-7 py-3.5 no-underline mt-7 transition-all hover:bg-white hover:-translate-y-0.5"
           >
             Learn More
             <svg
