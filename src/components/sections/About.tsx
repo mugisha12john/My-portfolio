@@ -1,5 +1,5 @@
 import React from "react";
-import aboutPic from "../../assets/about-pic.jpeg";
+import aboutPic from "../../assets/about-pic.webp";
 
 const SOCIAL_LINKS = [
   {

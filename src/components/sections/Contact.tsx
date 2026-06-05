@@ -113,7 +113,7 @@ const Contact: React.FC = () => {
 
           <div className="contact-socials flex flex-col gap-2.5">
             <a
-              href="mailto:johnbutisa004@gmail.com"
+              href="mailto:johnbutista004@gmail.com"
               className="contact-social-link flex items-center gap-3.5 font-mono text-[12px] text-text-dim no-underline p-3.5 px-4 border border-[rgba(127,238,100,0.12)] transition-all hover:border-green hover:text-green hover:bg-[rgba(127,238,100,0.06)]"
             >
               <svg
@@ -131,7 +131,7 @@ const Contact: React.FC = () => {
                 <div className="contact-social-label tracking-widest uppercase text-[10px] mb-1">
                   Email
                 </div>
-                <div>johnbutisa004@gmail.com</div>
+                <div>johnbutista004@gmail.com</div>
               </div>
             </a>
 

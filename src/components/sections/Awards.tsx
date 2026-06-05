@@ -1,9 +1,9 @@
 import React from "react";
-import koica from "../../assets/team intello.jpeg";
-import scratchWinner from "../../assets/scratch winner.jpeg";
-import codewars from "../../assets/codewars.png";
-import github from "../../assets/github.png";
-import wpm from "../../assets/wpm.png";
+import koica from "../../assets/team intello.webp";
+import scratchWinner from "../../assets/scratch winner.webp";
+import codewars from "../../assets/codewars.webp";
+import github from "../../assets/github.webp";
+import wpm from "../../assets/wpm.webp";
 interface Award {
   id: number;
   year: string;
@@ -144,7 +144,11 @@ const Awards: React.FC = () => {
             className="award-card bg-bg-3 p-8 px-7 relative overflow-hidden border-t-2 border-t-transparent transition-all duration-300 hover:bg-bg-4 hover:border-t-green"
           >
             <div className="award-img-wrap">
-              <img src={award.image}  className="w-80 h-52" alt={`${award.title} proof`} />
+              <img
+                src={award.image}
+                className="w-80 h-52"
+                alt={`${award.title} proof`}
+              />
               <div className="award-img-overlay"></div>
               <div className="award-img-icon">
                 <i data-lucide="trophy"></i>

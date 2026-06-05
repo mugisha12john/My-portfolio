@@ -104,7 +104,7 @@ const Hero: React.FC = () => {
               Total Projects
             </div>
           </div>
-          <div className="stat text-right">
+          <div className="stat text-right" aria-label="team-members-led">
             <div className="stat-num text-[36px] font-black text-green leading-none">
               9
             </div>
