@@ -73,3 +73,25 @@ export default defineConfig([
   },
 ])
 ```
+
+## App routes
+
+This portfolio uses client-side routing with `react-router-dom` (v6). The available routes are:
+
+- `/` — Home (full one-page layout)
+- `/about` — About section
+- `/experience` — Experience timeline
+- `/projects` — Projects gallery
+- `/awards` — Awards
+- `/skills` — Skills
+- `/contact` — Contact form
+
+Run the development server with:
+
+```bash
+npm install
+npm run dev
+```
+
+When visiting the app in development, use the links in the header for quick navigation between routes. The `Header` component uses `NavLink` so the active route is highlighted.
+

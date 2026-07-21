@@ -10,12 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.2.4",
     "@emailjs/browser": "^4.3.3",
+    "@tailwindcss/vite": "^4.2.4",
     "lucide-react": "^1.14.0",
     "pdfkit": "^0.18.0",
     "react": "^19.2.5",
-    "react-dom": "^19.2.5"
+    "react-dom": "^19.2.5",
+    "react-router-dom": "^6.30.4"
   },
   "devDependencies": {
     "@babel/core": "^7.29.0",

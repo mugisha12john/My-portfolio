@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { NavLink } from "react-router-dom";
 import NAV_LINKS from "./navLinks";
 
 const NavLogo: React.FC = () => (
@@ -31,13 +32,16 @@ const MobileMenu: React.FC<{
       <ul className="flex flex-col gap-6 list-none">
         {links.map((link) => (
           <li key={link.label}>
-            <a
-              href={link.href}
+            <NavLink
+              to={link.href}
               onClick={onClose}
-              className="font-mono text-[13px] text-text-dim no-underline tracking-widest uppercase transition-colors hover:text-green"
+              className={({ isActive }) =>
+                "font-mono text-[13px] text-text-dim no-underline tracking-widest uppercase transition-colors hover:text-green" +
+                (isActive ? " text-green" : "")
+              }
             >
               {link.label}
-            </a>
+            </NavLink>
           </li>
         ))}
       </ul>
@@ -70,13 +74,16 @@ const Header: React.FC = () => {
       >
         {NAV_LINKS.map((link) => (
           <li key={link.label}>
-            <a
-              href={link.href}
-              className="font-mono text-[11px] text-text-dim no-underline tracking-widest uppercase transition-colors relative hover:text-green after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-px after:bg-green after:transition-all after:duration-300 hover:after:w-full"
+            <NavLink
+              to={link.href}
+              className={({ isActive }) =>
+                "font-mono text-[11px] text-text-dim no-underline tracking-widest uppercase transition-colors relative hover:text-green after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-px after:bg-green after:transition-all after:duration-300 hover:after:w-full" +
+                (isActive ? " text-green" : "")
+              }
               aria-label={`Go to ${link.label}`}
             >
               {link.label}
-            </a>
+            </NavLink>
           </li>
         ))}
       </ul>
