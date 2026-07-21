@@ -1,25 +1,11 @@
-import React, { useEffect, useState } from "react";
-import CustomCursor from "./CustomCursor";
+import React from "react";
 import HeroContent from "./HeroContent";
 import HeroStats from "./HeroStats";
 import ScrollHint from "./ScrollHint";
 
 const Hero: React.FC = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
-
   return (
     <>
-      <CustomCursor mousePosition={mousePosition} />
-
       <section
         id="hero"
         className="relative min-h-screen flex flex-col justify-center px-15 overflow-hidden"

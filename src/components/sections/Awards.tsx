@@ -143,10 +143,10 @@ const Awards: React.FC = () => {
             key={award.id}
             className="award-card bg-bg-3 p-8 px-7 relative overflow-hidden border-t-2 border-t-transparent transition-all duration-300 hover:bg-bg-4 hover:border-t-green"
           >
-            <div className="award-img-wrap">
+            <div className="w-full">
               <img
                 src={award.image}
-                className="w-80 h-52"
+                className="w-full aspect-3/2 md:aspect-16/9 overflow-hidden rounded-sm border border-[rgba(127,238,100,0.12)]"
                 alt={`${award.title} proof`}
               />
               <div className="award-img-overlay"></div>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import NAV_LINKS from "./navLinks";
 
 const NavLogo: React.FC = () => (
@@ -22,7 +22,11 @@ const SkipNav: React.FC = () => (
 const MobileMenu: React.FC<{
   onClose: () => void;
   links: typeof NAV_LINKS;
-}> = ({ onClose, links }) => {
+  handleNavClick: (
+    e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>,
+    to: string,
+  ) => void;
+}> = ({ onClose, links, handleNavClick }) => {
   return (
     <div
       className="absolute top-full left-0 w-full bg-bg-2 border-b border-[rgba(127,238,100,0.12)] p-6 flex flex-col gap-6 md:hidden shadow-lg animate-fade-up"
@@ -34,7 +38,10 @@ const MobileMenu: React.FC<{
           <li key={link.label}>
             <NavLink
               to={link.href}
-              onClick={onClose}
+              onClick={(e) => {
+                onClose();
+                handleNavClick(e as any, link.href);
+              }}
               className={({ isActive }) =>
                 "font-mono text-[13px] text-text-dim no-underline tracking-widest uppercase transition-colors hover:text-green" +
                 (isActive ? " text-green" : "")
@@ -59,6 +66,31 @@ const MobileMenu: React.FC<{
 
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>,
+    to: string,
+  ) => {
+    // If we're already on the home page, try to smooth-scroll to the section
+    if (location.pathname === "/" && to.startsWith("/")) {
+      e.preventDefault();
+      const id = to === "/" ? "hero" : to.replace(/^\//, "");
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+        setIsMobileMenuOpen(false);
+        return;
+      }
+    }
+
+    if (location.pathname !== to) {
+      e.preventDefault();
+      navigate(to);
+      setIsMobileMenuOpen(false);
+    }
+  };
 
   return (
     <nav
@@ -76,6 +108,7 @@ const Header: React.FC = () => {
           <li key={link.label}>
             <NavLink
               to={link.href}
+              onClick={(e) => handleNavClick(e as any, link.href)}
               className={({ isActive }) =>
                 "font-mono text-[11px] text-text-dim no-underline tracking-widest uppercase transition-colors relative hover:text-green after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-px after:bg-green after:transition-all after:duration-300 hover:after:w-full" +
                 (isActive ? " text-green" : "")
@@ -113,6 +146,7 @@ const Header: React.FC = () => {
         <MobileMenu
           onClose={() => setIsMobileMenuOpen(false)}
           links={NAV_LINKS}
+          handleNavClick={handleNavClick}
         />
       )}
     </nav>
