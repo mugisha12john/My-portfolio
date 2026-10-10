@@ -36,6 +36,25 @@ const ProjectsGrid: React.FC = () => {
 
   return (
     <>
+      <div className="mt-10 mb-10">
+        {!showAll ? (
+          <button
+            type="button"
+            onClick={handleShowAll}
+            className="font-mono text-[11px] text-bg bg-green px-6 py-3 tracking-[0.12em] uppercase transition-all hover:opacity-90"
+          >
+            View All Projects
+          </button>
+        ) : (
+          <button
+            type="button"
+            onClick={handleShowLess}
+            className="font-mono text-[11px] text-text-muted border border-[rgba(127,238,100,0.2)] px-6 py-3 tracking-[0.12em] uppercase transition-all hover:border-green hover:text-green"
+          >
+            Show Less
+          </button>
+        )}
+      </div>
       {showAll && (
         <div className="projects-tabs flex flex-wrap items-center gap-2 mb-8">
           <span className="font-mono text-[10px] text-text-muted tracking-[0.2em] uppercase mr-2">
@@ -63,26 +82,6 @@ const ProjectsGrid: React.FC = () => {
             onMouseMove={handleMouseMove}
           />
         ))}
-      </div>
-
-      <div className="mt-10">
-        {!showAll ? (
-          <button
-            type="button"
-            onClick={handleShowAll}
-            className="font-mono text-[11px] text-bg bg-green px-6 py-3 tracking-[0.12em] uppercase transition-all hover:opacity-90"
-          >
-            View All Projects
-          </button>
-        ) : (
-          <button
-            type="button"
-            onClick={handleShowLess}
-            className="font-mono text-[11px] text-text-muted border border-[rgba(127,238,100,0.2)] px-6 py-3 tracking-[0.12em] uppercase transition-all hover:border-green hover:text-green"
-          >
-            Show Less
-          </button>
-        )}
       </div>
     </>
   );

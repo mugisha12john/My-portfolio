@@ -55,7 +55,7 @@ export const projects: Project[] = [
         url: "mailto:johnbutista004@gmail.com?subject=Private%20Project%20Access%20-%20WCAM",
       },
     ],
-    featured: true,
+    featured: false,
     access: "private",
   },
   {
@@ -74,8 +74,8 @@ export const projects: Project[] = [
         url: "https://github.com/thicien/Website-project",
       },
       {
-        type: "Request Access",
-        url: "mailto:johnbutista004@gmail.com?subject=Project%20Access%20-%20Baumeister",
+        type: "Live Demo",
+        url: "https://website-project-group2.netlify.app/",
       },
     ],
   },

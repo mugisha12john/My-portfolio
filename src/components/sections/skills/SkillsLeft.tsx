@@ -7,12 +7,13 @@ const skillGroups: SkillGroup[] = [
   {
     category: "// Primary Stack",
     skills: [
-      { name: "JavaScript / TypeScript", level: 95 },
-      { name: "React / Next.js", level: 88 },
-      { name: "Node.js / Express", level: 85 },
-      { name: "MySQL / Databases", level: 82 },
-      { name: "IoT / ESP32 / C++", level: 76 },
+      { name: "JavaScript / TypeScript", level: 91 },
+      { name: "React ", level: 88 },
+      { name: "NestJs / Node.js / Express", level: 85 },
+      { name: "MySQL / Postgres / Databases", level: 82 },
+      { name: "IoT / ESP32 / C++", level: 56 },
       { name: "Tailwind CSS", level: 90 },
+      { name: "Docker", level: 74 },
     ],
   },
   {
