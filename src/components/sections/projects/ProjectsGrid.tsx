@@ -9,9 +9,8 @@ import ProjectCard from "./ProjectCard";
 
 const ProjectsGrid: React.FC = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [activeTab, setActiveTab] = useState<
-    "All" | "Education" | "Client" | "Self" | "Hackathon"
-  >("All");
+  const [activeTab, setActiveTab] =
+    useState<(typeof tabs)[number]["value"]>("All");
   const [showAll, setShowAll] = useState(false);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {

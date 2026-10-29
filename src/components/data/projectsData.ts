@@ -14,13 +14,22 @@ import listListingImage from "../../assets/list listing.webp";
 import staticJobImage from "../../assets/static job.webp";
 import ageCalculatorImage from "../../assets/age calculator.webp";
 import vanLifeImage from "../../assets/van life.webp";
+import nineCollImage from "../../assets/9c0ll.webp";
+import oskImage from "../../assets/oskfrontend.webp";
+import carsharingImage from "../../assets/carsharing.webp";
 
 export interface Project {
   id: number;
   num: string;
   tag: string;
   name: string;
-  category: "Education" | "Client" | "Self" | "Hackathon";
+  category:
+    | "Education"
+    | "Client"
+    | "Self"
+    | "Hackathon"
+    | "Company"
+    | "Open Source";
   image: string;
   description: string;
   tech: string[];
@@ -30,6 +39,57 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    id: 18,
+    num: "018",
+    tag: "Company · Collaboration",
+    name: "9Coll",
+    category: "Company",
+    image: nineCollImage,
+    description:
+      "Collaborated with the team to build our company website, presenting 9Coll and its work online.",
+    tech: [],
+    links: [
+      {
+        type: "Live Website",
+        url: "https://www.9coll.com/",
+      },
+    ],
+  },
+  {
+    id: 19,
+    num: "019",
+    tag: "Open Source · Frontend · Community",
+    name: "Open Source Kigali",
+    category: "Open Source",
+    image: oskImage,
+    description:
+      "Contributing to the React frontend of Open Source Kigali's community website, collaborating with other open-source contributors on its development.",
+    tech: ["React"],
+    links: [
+      {
+        type: "Source Code",
+        url: "https://github.com/Open-Source-Kigali/osk-frontend",
+      },
+      {
+        type: "Live Website",
+        url: "https://oskigali.org/",
+      },
+    ],
+  },
+  {
+    id: 20,
+    num: "020",
+    tag: "Education · The Gym · Full Stack",
+    name: "Carsharing",
+    category: "Education",
+    image: carsharingImage,
+    description:
+      "A collaborative car-sharing platform built as the final project for The Gym training. Contributed to both the React frontend and the NestJS backend, bringing together a year of software development training.",
+    tech: ["React", "NestJS"],
+    links: [],
+    featured: true,
+  },
   {
     id: 1,
     num: "001",
@@ -382,12 +442,14 @@ export const projects: Project[] = [
 
 export const tabs = [
   { label: "All", value: "All" },
+  { label: "Company", value: "Company" },
+  { label: "Open Source", value: "Open Source" },
   { label: "Education", value: "Education" },
   { label: "Hackathon", value: "Hackathon" },
   { label: "Self", value: "Self" },
   { label: "Client", value: "Client" },
 ] as const;
 
-export const previewProjectIds = new Set([1, 5, 9, 10]);
+export const previewProjectIds = new Set([18, 19, 20, 1]);
 
 export default projects;
