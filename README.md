@@ -94,3 +94,12 @@ npm run dev
 ```
 
 When visiting the app in development, use the links in the header for quick navigation between routes. The `Header` component uses `NavLink` so the active route is highlighted.
+
+## Updating the resume
+
+Edit `resume/Jean_Baptiste_Mugisha_CV.docx`, then run `npm run resume` with
+LibreOffice installed. This exports the Word document to `public/myresume.pdf`,
+which both desktop and mobile Resume buttons open. The export uses a temporary
+LibreOffice profile and preserves the existing PDF if conversion fails.
+
+Set `LIBREOFFICE_BIN` if the LibreOffice executable is not on your PATH.
