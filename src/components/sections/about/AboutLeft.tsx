@@ -13,10 +13,11 @@ const AboutLeft: React.FC = () => {
       </p>
 
       <p className="font-mono text-[13px] text-text-dim leading-[1.9] mb-5">
-        Based in <strong>Kigali, Rwanda</strong>, I lead a team of 9 at{" "}
-        <strong>9 call company</strong>. We are currently developing a real-time
-        IoT water monitoring system designed to bring reliable data to our local
-        communities.
+        Based in <strong>Kigali, Rwanda</strong>, I am a co-founder and project
+        manager at <strong>9Coll Ltd</strong>, where I lead a team of 9 and
+        contribute to both frontend and backend development across our projects.
+        Our work includes WCAM, a real-time IoT water monitoring system designed
+        to bring reliable data to our local communities.
       </p>
 
       <div className="about-socials flex gap-2.5 mt-9">
