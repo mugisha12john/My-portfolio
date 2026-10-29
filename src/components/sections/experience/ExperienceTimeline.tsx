@@ -24,20 +24,20 @@ const ExperienceTimeline: React.FC = () => (
       <TimelineItem
         ariaLabel="experience-wcam"
         period="2026 — Present"
-        role="Project Manager & Frontend Lead"
-        place="9Call Company · Kigali, Rwanda"
+        role="Co-Founder, Project Manager & Full-Stack Developer"
+        place="9Coll Ltd · Kigali, Rwanda"
         desc={
-          "Leading a 9-person cross-functional team building WCAM — an IoT water monitoring platform. Owned system architecture, ESP32 firmware integration, React dashboard, and 3-tier RBAC design."
+          "Co-founder and project manager at 9Coll, leading a 9-person cross-functional team and coordinating delivery across company projects. Contribute to both frontend and backend development, including WCAM, an IoT water monitoring platform."
         }
       />
 
       <TimelineItem
         ariaLabel="experience-gym-trainee"
-        period="Feb, 2025 — present"
-        role="The Gym Rwanda trainee"
-        place="Junior software developer · Rwanda"
+        period="Phase 1 · Completed"
+        role="Software Development Trainee"
+        place="The Gym Rwanda · Rwanda"
         desc={
-          "Studying with working on project using react,typescript, node.js"
+          "Completed Phase 1 after one year of software development training. Collaborated on Carsharing, the final project, contributing to both the React frontend and NestJS backend."
         }
       />
 
