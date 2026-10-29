@@ -70,43 +70,47 @@ const ProjectCard: React.FC<Props> = ({
           {project.description}
         </p>
 
-        <div className="project-tech flex flex-wrap gap-2 mb-6">
-          {project.tech.map((tech, index) => (
-            <span
-              key={index}
-              className="tech-pill font-mono text-[10px] text-text-muted border border-[rgba(127,238,100,0.12)] px-2.5 py-1 tracking-[0.08em]"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
-
-        <div className="project-links flex gap-4 relative z-10">
-          {project.links.map((link, index) => {
-            const isExternal = link.url.startsWith("http");
-            return (
-              <a
+        {project.tech.length > 0 && (
+          <div className="project-tech flex flex-wrap gap-2 mb-6">
+            {project.tech.map((tech, index) => (
+              <span
                 key={index}
-                href={link.url}
-                target={isExternal ? "_blank" : undefined}
-                rel={isExternal ? "noopener noreferrer" : undefined}
-                className="proj-link font-mono text-[10px] text-green no-underline tracking-widest uppercase flex items-center gap-1.5 border-b border-[rgba(127,238,100,0.3)] pb-0.5 transition-all hover:text-white hover:border-white cursor-pointer"
+                className="tech-pill font-mono text-[10px] text-text-muted border border-[rgba(127,238,100,0.12)] px-2.5 py-1 tracking-[0.08em]"
               >
-                {link.type}
-                <svg
-                  width="12"
-                  height="12"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
+                {tech}
+              </span>
+            ))}
+          </div>
+        )}
+
+        {project.links.length > 0 && (
+          <div className="project-links flex gap-4 relative z-10">
+            {project.links.map((link, index) => {
+              const isExternal = link.url.startsWith("http");
+              return (
+                <a
+                  key={index}
+                  href={link.url}
+                  target={isExternal ? "_blank" : undefined}
+                  rel={isExternal ? "noopener noreferrer" : undefined}
+                  className="proj-link font-mono text-[10px] text-green no-underline tracking-widest uppercase flex items-center gap-1.5 border-b border-[rgba(127,238,100,0.3)] pb-0.5 transition-all hover:text-white hover:border-white cursor-pointer"
                 >
-                  <path d="M7 17L17 7M17 7H7M17 7V17" />
-                </svg>
-              </a>
-            );
-          })}
-        </div>
+                  {link.type}
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                  </svg>
+                </a>
+              );
+            })}
+          </div>
+        )}
       </div>
     </div>
   );
