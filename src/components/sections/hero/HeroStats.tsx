@@ -1,4 +1,5 @@
 import React from "react";
+import { projects } from "../../data/projectsData";
 
 const HeroStats: React.FC = () => (
   <div
@@ -7,7 +8,7 @@ const HeroStats: React.FC = () => (
   >
     <div className="stat text-right">
       <div className="stat-num text-[36px] font-black text-green leading-none">
-        17
+        {projects.length}
       </div>
       <div className="stat-label font-mono text-[10px] text-text-muted tracking-[0.15em] uppercase mt-1">
         Total Projects
