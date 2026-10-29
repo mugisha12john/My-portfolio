@@ -10,12 +10,34 @@ interface Award {
   title: string;
   description: string;
   issuer: string;
-  image: string;
+  image?: string;
   icon: React.ReactNode;
 }
 
 const Awards: React.FC = () => {
   const awards: Award[] = [
+    {
+      id: 6,
+      year: "Completed · 1 Year",
+      title: "The Gym — Phase 1 Completion",
+      description:
+        "Completed Phase 1 of The Gym's software development training after one year of learning and collaborative project work. Contributed to the React frontend and NestJS backend of Carsharing, the final project.",
+      issuer: "The Gym Rwanda · Software Development",
+      icon: (
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          aria-hidden="true"
+        >
+          <path d="M22 10 12 5 2 10l10 5 10-5Z" />
+          <path d="M6 12v5c3 3 9 3 12 0v-5M22 10v6" />
+        </svg>
+      ),
+    },
     {
       id: 1,
       year: "2025",
@@ -137,23 +159,25 @@ const Awards: React.FC = () => {
         Awards & <span className="text-green">Achievements</span>
       </h2>
 
-      <div className="awards-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[rgba(127,238,100,0.12)]">
+      <div className="awards-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[rgba(127,238,100,0.12)]">
         {awards.map((award) => (
           <div
             key={award.id}
             className="award-card bg-bg-3 p-8 px-7 relative overflow-hidden border-t-2 border-t-transparent transition-all duration-300 hover:bg-bg-4 hover:border-t-green"
           >
-            <div className="w-full">
-              <img
-                src={award.image}
-                className="w-full aspect-3/2 md:aspect-16/9 overflow-hidden rounded-sm border border-[rgba(127,238,100,0.12)]"
-                alt={`${award.title} proof`}
-              />
-              <div className="award-img-overlay"></div>
-              <div className="award-img-icon">
-                <i data-lucide="trophy"></i>
+            {award.image && (
+              <div className="w-full">
+                <img
+                  src={award.image}
+                  className="w-full aspect-3/2 md:aspect-16/9 overflow-hidden rounded-sm border border-[rgba(127,238,100,0.12)]"
+                  alt={`${award.title} proof`}
+                />
+                <div className="award-img-overlay"></div>
+                <div className="award-img-icon">
+                  <i data-lucide="trophy"></i>
+                </div>
               </div>
-            </div>
+            )}
             <div className="award-icon-wrap w-12.5 h-12.5 border border-[rgba(127,238,100,0.12)] flex items-center justify-center text-green mb-4.5 bg-bg-2 transition-all hover:bg-[rgba(127,238,100,0.06)] hover:border-[rgba(127,238,100,0.3)]">
               {award.icon}
             </div>
